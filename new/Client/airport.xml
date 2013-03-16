@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Airport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="airport.xsd">
+  <TableAirport>
+    <AirportCode>TKJ</AirportCode>
+    <CityOrAirportName>TOK</CityOrAirportName>
+    <Country>United States</Country>
+    <CountryAbbrviation>US</CountryAbbrviation>
+    <CountryCode>1</CountryCode>
+    <GMTOffset>-9</GMTOffset>
+    <RunwayLengthFeet>1700</RunwayLengthFeet>
+    <RunwayElevationFeet>1670</RunwayElevationFeet>
+    <LatitudeDegree>63</LatitudeDegree>
+    <LatitudeMinute>18</LatitudeMinute>
+    <LatitudeSecond>0</LatitudeSecond>
+    <LatitudeNpeerS>N</LatitudeNpeerS>
+    <LongitudeDegree>143</LongitudeDegree>
+    <LongitudeMinute>0</LongitudeMinute>
+    <LongitudeSeconds>0</LongitudeSeconds>
+    <LongitudeEperW>W</LongitudeEperW>
+  </TableAirport>
+  <TableAirport>
+    <AirportCode>TKJ</AirportCode>
+    <CityOrAirportName>TOK</CityOrAirportName>
+    <Country>United States</Country>
+    <CountryAbbrviation>US</CountryAbbrviation>
+    <CountryCode>1</CountryCode>
+    <GMTOffset>-9</GMTOffset>
+    <RunwayLengthFeet>1700</RunwayLengthFeet>
+    <RunwayElevationFeet>1670</RunwayElevationFeet>
+    <LatitudeDegree>63</LatitudeDegree>
+    <LatitudeMinute>18</LatitudeMinute>
+    <LatitudeSecond>0</LatitudeSecond>
+    <LatitudeNpeerS>N</LatitudeNpeerS>
+    <LongitudeDegree>143</LongitudeDegree>
+    <LongitudeMinute>0</LongitudeMinute>
+    <LongitudeSeconds>0</LongitudeSeconds>
+    <LongitudeEperW>W</LongitudeEperW>
+  </TableAirport>
+</Airport>
