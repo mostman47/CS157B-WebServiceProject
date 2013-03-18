@@ -21,6 +21,7 @@ public class Test {
         // getAirportbyCountry();
         // getAirportbyCity();
         //getAirportAndWeather();
+        System.out.println("DA NANG".toLowerCase().contains("da nang".toLowerCase()));
         String _COMMAND = "*********COMMAND*******\n"
                 + "1: Search City by Country\n"
                 + "2: Search Weather of City\n"
@@ -140,17 +141,19 @@ public class Test {
         String city = "";
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         try {
+            
             System.out.print("Enter Country: ");
-
             country = br.readLine();
             System.out.print("Enter City: ");
 
             city = br.readLine();
+                        System.out.println("=================RESULT=================");
+
         } catch (IOException ioe) {
             System.out.println("IO error trying to read your name!");
             System.exit(1);
         }
-        new TestAirport().getAirportByCity(city);
+        new TestAirport().getAirportByCountryAndCity(country,city);
         new TestWeather().getWeather(country, city);
     }
 }

@@ -6,6 +6,7 @@ import generated.City.Cities;
 import generated.City.TableCity;
 import generated.Weather.CurrentWeather;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.*;
 
@@ -16,6 +17,7 @@ public class JAXBUnMarshaller {
 
     public void unMarshallCity(File xmlDocument) {
         try {
+            
             JAXBContext jaxbContext =
                     JAXBContext.newInstance("generated.City");
             Unmarshaller unMarshaller = jaxbContext.createUnmarshaller();
@@ -68,6 +70,8 @@ public class JAXBUnMarshaller {
     }
 
     public void unMarshallAirport(File xmlDocument) {
+        ArrayList t = new ArrayList<String>();
+
         try {
             JAXBContext jaxbContext =
                     JAXBContext.newInstance("generated.Airport");
@@ -77,8 +81,14 @@ public class JAXBUnMarshaller {
                     (JAXBElement<Airport>) unMarshaller.unmarshal(xmlDocument);
             Airport airport = airportAXBElement.getValue();
             List<TableAirport> tableAirports = airport.getTableAirport();
-
             for (TableAirport c : tableAirports) {
+                             //   System.out.println(c.getCityOrAirportName());
+
+                if(t.contains(c.getAirportCode()))
+                    continue;
+                else
+                {
+                    t.add(c.getAirportCode());
                 System.out.println("****AIRPORT****");
 
                 System.out.println(c.getAirportCode());
@@ -90,6 +100,7 @@ public class JAXBUnMarshaller {
                 //System.out.println(c.getRunwayLengthFeet());
 
                 System.out.println("********");
+                }
             }
         } catch (JAXBException ex) {
             ex.printStackTrace();
@@ -109,6 +120,48 @@ public class JAXBUnMarshaller {
         //
 
         File y = new File("airport.xml");
-        new JAXBUnMarshaller().unMarshallAirport(y);
+        new JAXBUnMarshaller().unMarshallAirportWithCity(y,"da");
+    }
+
+   
+    public void unMarshallAirportWithCity(File xmlDocument, String city) {
+
+        try {
+            JAXBContext jaxbContext =
+                    JAXBContext.newInstance("generated.Airport");
+            Unmarshaller unMarshaller = jaxbContext.createUnmarshaller();
+
+            JAXBElement<Airport> airportAXBElement =
+                    (JAXBElement<Airport>) unMarshaller.unmarshal(xmlDocument);
+            Airport airport = airportAXBElement.getValue();
+            List<TableAirport> tableAirports = airport.getTableAirport();
+                            System.out.println("****AIRPORT****");
+String s="";
+            for (TableAirport c : tableAirports) {
+                //System.out.println(c.getCityOrAirportName());
+                //System.out.println(city);
+                if(c.getCityOrAirportName().toLowerCase().contains(city.toLowerCase()))
+                {
+                s+=c.getAirportCode()+"\n";
+
+                s+="Aiport name: " + c.getCityOrAirportName()+"\n";
+                s+="Country: " + c.getCountry()+"\n";
+                s+="GMT: " + c.getGMTOffset()+"\n";
+                //System.out.println(c.getRunwayElevationFeet());
+                //System.out.println(c.getRunwayLengthFeet());
+                break;
+                }
+                else
+                    continue;
+            }
+            if(s.equals(""))
+                System.out.println("Data Not Found");
+            else
+                System.out.println(s);
+                            System.out.println("********");
+
+        } catch (JAXBException ex) {
+            ex.printStackTrace();
+        }
     }
 }

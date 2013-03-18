@@ -58,4 +58,7 @@ public class TestCity {
         weatherairport.WeatherAirportWS port = service.getWeatherAirportWSPort();
         return port.citiesOfCountry(country);
     }
+    public static void main(String[] args) {
+        System.out.println(citiesOfCountry("viet nam"));
+    }
 }

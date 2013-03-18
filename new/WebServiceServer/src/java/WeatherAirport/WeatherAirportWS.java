@@ -81,6 +81,22 @@ public class WeatherAirportWS {
         //TODO write your implementation code here:
         return getAirportInformationByCityOrAirportName(City);
     }
+
+    private String getAirportInformationByAirportCode(java.lang.String airportCode) {
+        Air.AirportSoap port = service_1.getAirportSoap12();
+        return port.getAirportInformationByAirportCode(airportCode);
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "getAirportInfoByAirportCode")
+    public String getAirportInfoByAirportCode(@WebParam(name = "airport code") String aiportCode) {
+        //TODO write your implementation code here:
+        return getAirportInformationByAirportCode(aiportCode);
+    }
+
+    
     /**
      * This is a sample web service operation
      */

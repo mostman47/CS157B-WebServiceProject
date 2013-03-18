@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CurrentWeather>
-  <Location>Tokyo International Airport, Japan (RJTT) 35-33N 139-47E 8M</Location>
-  <Time>Mar 16, 2013 - 04:30 AM EDT / 2013.03.16 0830 UTC</Time>
-  <Wind> from the S (190 degrees) at 9 MPH (8 KT):0</Wind>
-  <Visibility> greater than 7 mile(s):0</Visibility>
-  <SkyConditions> mostly clear</SkyConditions>
-  <Temperature> 60 F (16 C)</Temperature>
-  <DewPoint> 37 F (3 C)</DewPoint>
-  <RelativeHumidity> 41%</RelativeHumidity>
-  <Pressure> 29.85 in. Hg (1011 hPa)</Pressure>
+  <Location>Da Nang, Vietnam (VVDN) 16-02N 108-11E 7M</Location>
+  <Time>Mar 18, 2013 - 02:00 AM EDT / 2013.03.18 0600 UTC</Time>
+  <Wind> from the ESE (120 degrees) at 9 MPH (8 KT):0</Wind>
+  <Visibility> 4 mile(s):0</Visibility>
+  <SkyConditions> partly cloudy</SkyConditions>
+  <Temperature> 89 F (32 C)</Temperature>
+  <DewPoint> 75 F (24 C)</DewPoint>
+  <RelativeHumidity> 62%</RelativeHumidity>
+  <Pressure> 29.74 in. Hg (1007 hPa)</Pressure>
   <Status>Success</Status>
 </CurrentWeather>
