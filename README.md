@@ -7,7 +7,7 @@ Semester: Spring 2013
 ------------------------
 All projects include different kind of data sources: XML, Webservice, Oracle Database, spreadsheet, txt ...
 ------------------------
-Forum\n
+Forum
   -Java, MySql, NetBeans
   -Simple project using MySql
   -DS: Oracle Db
